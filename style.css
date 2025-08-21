@@ -1,0 +1,1074 @@
+html,
+body {
+    margin: 0 px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.7
+    position: absolute;
+    top: 0;
+background-color: #000;
+    
+}
+.wrapper {
+    width: 1050px;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #080808;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #666;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+* Menu
+*/
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(2, 2, 2, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #050505;
+}
+
+.navbar.scrolled {
+  background-color: rgba(1, 1, 1, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fafafa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #007bff;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #fbfafa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #007bff;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #fcfbfb;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/*
+* Hero / Jumbotron
+*/
+header {
+    background-color: #000;
+    
+
+}
+
+#profile > .wrapper > h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 5.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#profile > .wrapper > h4 > span {
+    color: #33A1E0;
+}
+
+
+
+#bio {
+    background-color: #000;
+}
+
+
+
+
+#bio > .grud > .item > p {
+     
+    background-color: #000;
+    border-radius: 5px;
+    position: relative;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#bio > .grud > .item > img {
+    justify-content: center;
+    wi
+}
+
+.grud {
+     display: grid;
+    color: #EEEEEE;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 70px;
+}
+
+#bio > .grud > .item > p {
+    
+    text-align: center;
+    font-weight: bold;
+}
+
+#bio > .grud > .item > img {
+    border-radius: 50%;
+}
+
+
+
+
+
+/*
+* statistic
+*/
+#statistic {
+    background-color: #000;
+    color: #fff;
+}
+
+#statistic > .wrapper {
+    padding: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#statistic > .wrapper > div {
+    text-align: center;
+}
+
+#statistic > .wrapper > div > p {
+    font-size: 4rem;
+    margin: 0px;
+    padding: 0px;
+}
+ 
+#statistic > .wrapper > div > p > i {
+    margin-right: 10px;
+    font-size: 3,5rem;
+}
+
+#statistic > .wrapper > div > small {
+    font-size: 2rem;
+}
+
+/*
+* kelebihan
+*/
+
+
+
+#kelebihan {
+    background-color: #000;
+    color: #EEEEEE;
+    height:  50vh;
+}
+
+#kelebihan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    height: 15vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#kelebihan > .wrapper > h4 > span {
+    color: #33A1E0;
+} 
+#kelebihan > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.judul > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.judul > h4 > span {
+    color: #33A1E0;
+}
+
+.judul > p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 200px;
+}
+.grid > .item {
+    border: 1px solid #666;
+    background-color: #393e46;
+    border-radius: 5px;
+    position: relative;
+}
+
+.grid > .item > img {
+   width: 10%; 
+   position: absolute;
+   top: 10px;
+   right: 10px;
+}
+
+.grid > .item > .item-detail {
+    padding: 3px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 85%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+
+/*
+* adventages
+*/
+
+#lebih {
+    background-color: #000;
+}
+
+#lebih {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    text-align: center;
+    display: block;
+
+}
+
+.gred {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ;
+}
+
+#lebih > .judul > p {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#lebih > .judul > h4 {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.gred {
+    display: grid;
+    color: #EEEEEE;
+    grid-template-columns: 30% 30%;
+    grid-gap: 50px;
+    
+}
+
+.gred > .item {
+    border: 1px solid #666;
+    background: #393e46;
+    border-radius: 5px;
+    width: 105%;
+    text-align: center;
+}
+
+.gred > .item > p {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#warna > h4 {
+    text-align: center;
+    font-size: 3rem;
+    color: #EEEEEE;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Skills Section */
+.skills {
+    background-color: #000;
+}
+
+#skills {
+    background-color: #000;
+}
+
+.section-title {
+    color: #EEEEEE;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skill-card {
+  background-color: #393e46;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+.skill-title {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.skill-description {
+  color: #666666;
+  font-size: 1rem;
+}
+
+/*
+*citta cita
+*/
+
+#tujuan > .wrapper {
+    color: #EEEEEE;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#tujuan > .paragraf {
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    grid-template-columns: 100%;
+    background-color: #666;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    box-shadow: 0px 5px 15px #fff;
+    transition: all 0.5s ease;
+    
+}
+
+#tujuan > .paragraf:hover {
+    transform: translate(-5px);
+    box-shadow: 0px 5px 15px #666;
+}
+
+
+
+
+/*
+* Documenter
+*/
+
+#documenter {
+    background-color: #000;
+    color: #060606;
+}
+
+#documenter > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#documenter > .wrapper > h4 {
+    text-align: center;
+    font-size: 3rem;
+    color: #EEEEEE;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#documenter > .wrapper > p {
+    text-align: center;
+    color: #EEEEEE;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#documenter > .wrapper > div {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#documenter > .wrapper > div > .foto {
+    width: 30%;
+
+}
+
+#documenter > .wrapper > div > .foto > img {
+    width: 100%;
+}
+
+#documenter > .wrapper > div > .desc {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#documenter > .wrapper > div > .desc > p {
+    margin: 0px 0px 10px 5px;
+    font-size: 1.3rem;
+    line-height: 1,8rem;
+}
+
+
+#documenter > .wrapper > div > .desc > .social {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+
+#documenter > .wrapper > div > .desc > .social > a {
+    color: #33A1E0;
+}
+
+/*
+*hambuger menu
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* 1024, 900, 768, 600, 450
+*/
+
+@media only screen and (max-width: 1024px){
+    .wrapper {
+        width: 90%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+    #statistic > .wrapper > div > p {
+    font-size: 2.5rem;
+    margin: 0px;
+    padding: 0px;
+}
+#statistic > .wrapper > div > small {
+    font-size: 1rem;
+}
+
+#kelebihan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.grid {
+    grid-template-columns: 100%;
+}
+
+.gred {
+    grid-template-columns: 30% 30%;
+}
+
+#profile > .wrapper > h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.grud {
+    grid-template-columns: 100%;
+}
+
+#bio > .grud > .item > p {
+    max-width: 100%;
+     border: 1px solid #000000;
+    background-color: #000;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#kelebihan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.grid > .item > .item-detail > p {
+    font-size: 1rem;
+    justify-content: center;
+}
+
+
+
+#lebih > .judul > h4 {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+#lebih > .judul > h4 > span {
+    font-size: 2rem;
+}
+
+#lebih > .judul > p {
+    font-size: 1rem;
+}
+
+#bio > .grud > .item > p > a {
+    font-size: 3rem;
+}
+
+}
+
+@media only screen and (max-width: 768px){
+    .menu {
+        width: 60%;
+    }
+
+    #bio > .grud > .item > p {
+    max-width: 100%;
+     border: 1px solid #000000;
+    background-color: #000;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#statistic > .wrapper > div > p {
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+}
+#statistic > .wrapper > div > small {
+    font-size: 1rem;
+}
+
+#kelebihan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#bio > .grud > .item > p > a {
+    font-size: 2rem;
+}
+
+#kelebihan > .wrapper > h4 {
+    font-size: 1.8rem;
+}
+
+.grid > .item > img {
+   width: 9%; 
+   position: absolute;
+   top: 9px;
+   right: 9px;
+}
+
+.grid > .item > .item-detail > p {
+    font-size: 0.9rem;
+}
+
+#kelebihan > .wrapper > p {
+    font-size: 0.8rem;
+}
+
+#lebih > .judul > h4 {
+    font-size: 1.8rem;
+}
+
+.gred > .item > p {
+    font-size: 0.9rem;
+}
+
+#lebih > .judul > p {
+    font-size: 0.9rem;
+}
+
+#documenter > .wrapper > h4 {
+    font-size: 1.8rem;
+}
+
+#documenter > .wrapper > p {
+    font-size: 0.8rem;
+}
+
+#documenter > .wrapper > .foto > .desc > p {
+    font-size: 0.8rem;
+}
+
+}
+
+@media only screen and (max-width: 600px){
+    .menu {
+        width: 70%;
+    }
+
+    #profile > .wrapper > h4 {
+        font-size: 2.5rem;
+    }
+
+    #bio > .grud > .item > p {
+        font-size: 1.1rem;
+    }
+
+    #documenter > .wrapper > div {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .menu {
+        width: 80%;
+    }
+
+    #profile > .wrapper > h4 {
+        font-size: 2rem;
+    }
+
+    #bio > .grud > .item > p {
+        font-size: 0.8rem;
+    }
+
+    #statistic > .wrapper > div > p {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #kelebihan > .wrapper > h4 {
+        font-size: 1.5rem;
+        height: 8vh;
+    }
+
+    #kelebihan > .wrapper > p {
+        font-size: 0.8rem;
+    }
+
+    #lebih > .judul > h4 {
+        font-size: 1.5rem;
+    }
+
+    #lebih > .judul > h4 > span {
+        font-size: 1.5rem;
+    }
+
+    .grid > .item > img {
+        width: 40px;
+    }
+
+    .grid > .item > .item-detail > p {
+        height: vh;
+        font-size: 0.7rem;
+    }
+
+    .gred > .item > p {
+        grid-template-columns: 100%;
+    }
+
+    #warna > h4 {
+        font-size: 2rem;
+    }
+
+    #skills > .container > .section-title {
+        font-size: 2rem;
+    }
+
+    #skills > .container > .skills-grid {
+        font-size: 1rem;
+    }
+
+    #documenter > .wrapper > .desc > {
+        font-size: 12rem;
+    }
+
+    #lebih > .judul {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 810px) {
+  
+    .menu {
+        width: 60%;
+    }
+
+    #bio > .grud > .item > p {
+    max-width: 100%;
+     border: 1px solid #000000;
+    background-color: #000;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#statistic > .wrapper > div > p {
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+}
+#statistic > .wrapper > div > small {
+    font-size: 1rem;
+}
+
+#kelebihan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#bio > .grud > .item > p > a {
+    font-size: 2rem;
+}
+
+#kelebihan > .wrapper > h4 {
+    font-size: 1.8rem;
+}
+
+.grid > .item > img {
+   width: 9%; 
+   position: absolute;
+   top: 9px;
+   right: 9px;
+}
+
+.grid > .item > .item-detail > p {
+    font-size: 0.9rem;
+}
+
+#kelebihan > .wrapper > p {
+    font-size: 0.8rem;
+}
+
+#lebih > .judul > h4 {
+    font-size: 1.8rem;
+}
+
+.gred > .item > p {
+    font-size: 0.9rem;
+}
+
+#lebih > .judul > p {
+    font-size: 0.9rem;
+}
+
+#documenter > .wrapper > h4 {
+    font-size: 1.8rem;
+}
+
+#documenter > .wrapper > p {
+    font-size: 0.8rem;
+}
+
+#documenter > .wrapper > .foto > .desc > p {
+    font-size: 0.8rem;
+}
+
+
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #2b2a2a;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+}
+
+
+
+@media (max-width: 390px) {
+  
+    .menu {
+        width: 80%;
+    }
+
+    #profile > .wrapper > h4 {
+        font-size: 2rem;
+    }
+
+    #bio > .grud > .item > p {
+        font-size: 0.8rem;
+    }
+
+    #statistic > .wrapper > div > p {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #kelebihan > .wrapper > h4 {
+        font-size: 1.5rem;
+        height: 8vh;
+    }
+
+    #kelebihan > .wrapper > p {
+        font-size: 0.8rem;
+    }
+
+    #lebih > .judul > h4 {
+        font-size: 1.5rem;
+    }
+
+    #lebih > .judul > h4 > span {
+        font-size: 1.5rem;
+    }
+
+    .grid > .item > img {
+        width: 40px;
+    }
+
+    .grid > .item > .item-detail > p {
+        height: 25vh;
+        font-size: 0.7rem;
+    }
+
+    .gred > .item > p {
+        grid-template-columns: 100%;
+    }
+
+    #warna > h4 {
+        font-size: 2rem;
+    }
+
+    #skills > .container > .section-title {
+        font-size: 2rem;
+    }
+
+    #skills > .container > .skills-grid {
+        font-size: 1rem;
+    }
+
+    #documenter > .wrapper > .desc > {
+        font-size: 12rem;
+    }
+
+
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  
+}
